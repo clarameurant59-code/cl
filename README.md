@@ -1,176 +1,135 @@
-# 🏢 Visite Virtuelle 3D - Restaurant Éco-Responsable
+# 🌿 VERT RESTO - Visite Virtuelle 3D
 
-## Vue d'ensemble
+## 🏢 Restaurant Éco-Responsable de 60 Couverts
 
-Visite interactive 3D en temps réel d'un restaurant éco-responsable moderne situé en centre-ville à Nantes, d'une capacité de 60 couverts.
+**Localisation** : Centre-ville de Nantes
 
-### ✨ Caractéristiques
+### 📋 Concept
 
-- **Rendu 3D haute performance** avec Three.js
-- **Navigation intuitive** avec contrôles à la souris et tactiles
-- **Ambiance authentique** : mobilier en bois PEFC, matériaux recyclés, éclairage LED
-- **Design durable** : palette naturelle (bois clair, beige, vert sauge, noir mat)
-- **Zone interactive** : affichage d'informations lors du survol
-- **Interface responsive** : adaptation mobile/desktop
+Vert Resto est un restaurant éco-responsable moderne conçu pour offrir une expérience gastronomique premium tout en respectant les valeurs environnementales et sociales.
 
 ---
 
-## 📋 Contenu de la visite
+## ✨ Caractéristiques Principales
 
-### Zones principales
+### 🌳 Matériaux Durables
+- ✅ Mobilier en bois certifié **PEFC**
+- ✅ Matériaux **recyclés** et **biosourcés**
+- ✅ Finitions **naturelles**
+- ✅ Démarche **RSE** affirmée
 
-1. **Accueil** 🎯
-   - Comptoir compact et fonctionnel
-   - Design élégant
-   - Premier point de contact client
+### 🎨 Design & Ambiance
+- Palette naturelle: bois clair, beige, vert sauge, noir mat
+- Ambiance contemporaine, élégante et lumineuse
+- Espace optimisé malgré les contraintes (10m x 6m)
+- Circulation fluide pour clients et personnel
 
-2. **Salle à Manger** 🍽️
-   - 60 couverts optimisés
-   - Tables rondes en bois certifié PEFC
-   - Circulation fluide
-   - Ambiance lumineuse
+### 💡 Éclairage
+- Luminaires **LED basse consommation**
+- Capteurs automatiques de luminosité
+- Suspension moderne au-dessus des tables
+- Ambiance chaleureuse et fonctionnelle
 
-3. **Bar & Service** 🍷
-   - Espace dédié au bar
-   - Accents en vert sauge
-   - Éclairage chaleureux
+### 🌿 Végétation
+- Plantes vertes discrètes et stratégiques
+- Renforce l'image durable
+- Intégration sans encombrement
 
-4. **Éclairage** 💡
-   - Luminaires LED suspendus
-   - Capteurs automatiques de luminosité
-   - Basse consommation énergétique
+### 🍽️ Capacité
+- **60 couverts** optimisés
+- Configuration modulable
+- Espace pour accueil, salle, bar, cuisine, terrasse
 
-5. **Décoration** 🌱
-   - Plantes vertes discrètes
-   - Signalétique écologique
-   - Matériaux biosourcés
+---
+
+## 🎮 Visite Virtuelle Interactive
+
+### Technologie
+- **Babylon.js** : Moteur 3D WebGL haute performance
+- Rendu réaliste avec matériaux PBR
+- Navigation smooth et intuitive
+- Compatible desktop et mobile
+
+### Zones Explorables
+1. **🔔 Accueil** - Comptoir compact et fonctionnel
+2. **🍽️ Salle à Manger** - 60 couverts, tables en bois PEFC
+3. **👨‍🍳 Cuisine** - Espace de préparation optimisé
+4. **🍷 Bar** - Zone service avec accents verts
+5. **🌿 Terrasse** - Extension extérieure végétalisée
+
+### Contrôles
+- **Souris** : Clic + Déplacement pour naviguer
+- **Scroll** : Zoom avant/arrière
+- **Mobile** : Swipe pour tourner
+- **Boutons** : Fullscreen, Reset, Settings
+
+---
+
+## 📁 Structure du Projet
+
+```
+cl/
+├── index.html                  # Page d'accueil
+├── styles.css                  # Design responsive
+├── js/
+│   ├── babylon-config.js      # Configuration Babylon.js
+│   ├── materials-lib.js       # Bibliothèque de mat��riaux
+│   ├── scene-builder.js       # Construction de la scène
+│   ├── furniture.js           # Détails du mobilier
+│   ├── lighting.js            # Configuration d'éclairage
+│   ├── interactions.js        # Interactions utilisateur
+│   └── app.js                 # Application principale
+└── README.md                   # Documentation
+```
 
 ---
 
 ## 🚀 Installation & Démarrage
 
-### Prérequis
-- Navigateur web moderne (Chrome, Firefox, Safari, Edge)
-- Aucune dépendance externe requise (Three.js chargé via CDN)
-
-### Installation locale
+### Localement
 
 ```bash
-# 1. Cloner le repository
-git clone https://github.com/clarameurant59-code/cl.git
-cd cl
-
-# 2. Lancer un serveur local
+# Python 3
 python -m http.server 8000
-# ou
+
+# ou Node.js
 npx http-server
+```
 
-# 3. Ouvrir dans le navigateur
-# http://localhost:8000
+Accéder à : **http://localhost:8000**
+
+### En Ligne
+
+GitHub Pages :
+```bash
+https://clarameurant59-code.github.io/cl/
 ```
 
 ---
 
-## 🎮 Contrôles
+## 🎨 Palette de Couleurs
 
-### Souris
-- **Clic + Déplacement** : Faire tourner la caméra autour du restaurant
-- **Scroll** : Zoomer avant/arrière
-- **Hover** : Afficher les informations de zone
-
-### Tactile (Mobile)
-- **Glisser** : Faire tourner la caméra
-- **Pincer** : Zoomer (sur mobile avancé)
-
-### Boutons d'interface
-- **ℹ️** : Basculer le panneau d'information
-- **⛶** : Passer en plein écran
-- **🔄** : Réinitialiser la vue
+| Élément | Code | RGB |
+|---------|------|-----|
+| Bois Clair | #d4a574 | 212, 165, 116 |
+| Bois Foncé | #8b6f47 | 139, 111, 71 |
+| Vert Sauge | #9ba982 | 155, 169, 130 |
+| Accent Vert | #a8c686 | 168, 198, 134 |
+| Noir Mat | #2a2a2a | 42, 42, 42 |
+| Beige | #f5f1e8 | 245, 241, 232 |
+| Crème | #e8f0e8 | 232, 240, 232 |
 
 ---
 
-## 🏗️ Architecture du projet
+## 🌍 Valeurs RSE
 
-```
-cl/
-├── index.html              # Page principale
-├── styles.css              # Styles et design responsive
-├── js/
-│   ├── app.js             # Application principale
-│   ├── camera-controls.js # Contrôles de caméra
-│   ├── scene-builder.js   # Construction de la scène 3D
-│   └── ui-manager.js      # Gestion de l'interface
-└── README.md
-```
-
-### Modules
-
-#### **app.js**
-- Initialisation de la scène Three.js
-- Gestion du renderer WebGL
-- Gestion des événements (redimensionnement, fullscreen)
-- Boucle d'animation
-
-#### **camera-controls.js**
-- Contrôles de caméra orbitale
-- Support souris et tactile
-- Zoom avec scroll
-- Limitation des angles de rotation
-
-#### **scene-builder.js**
-- Construction de la géométrie du restaurant
-- Matériaux (bois, verre, béton, etc.)
-- Meubles (tables, chaises, bar)
-- Éclairage (ambient, directional, point lights)
-- Plantes et décoration
-
-#### **ui-manager.js**
-- Gestion des zones interactives
-- Affichage des informations contextuelles
-- Raycasting pour la détection de zones
-
----
-
-## 🎨 Design & Palette
-
-### Couleurs
-- **Bois clair** : #d4a574
-- **Beige/Crème** : #f5f1e8
-- **Vert sauge** : #9ba982
-- **Noir mat** : #2a2a2a
-- **Fond naturel** : #e8f0e8
-
-### Matériaux
-- Bois certifié PEFC
-- Matériaux recyclés
-- Finitions naturelles
-- Textiles écologiques
-
----
-
-## ⚙️ Technologies
-
-- **Three.js** : Moteur 3D WebGL
-- **HTML5** : Structure
-- **CSS3** : Styling et animations
-- **JavaScript ES6+** : Logique fonctionnelle
-- **WebGL** : Rendu graphique haute performance
-
----
-
-## 🌍 Optimisations
-
-### Performance
-- ✅ Ombres dynamiques optimisées (PCF)
-- ✅ Pixel ratio adapté à l'écran
-- ✅ LOD (Level of Detail) implicite
-- ✅ Préférence haute performance pour le navigateur
-
-### Accessibilité
-- ✅ Navigation au clavier supportée
-- ✅ Contrôles tactiles intuitifs
-- ✅ Responsive design
-- ✅ Interface claire et contrastée
+- 🌱 Matériaux écologiques et durables
+- ♻️ Mobilier en bois certifié PEFC
+- 💡 Éclairage LED basse consommation
+- 🌿 Intégration végétale
+- 🏢 Optimisation spatiale
+- 🤝 Espace accueillant et inclusif
+- 📍 Localisation en centre-ville
 
 ---
 
@@ -178,64 +137,33 @@ cl/
 
 | Navigateur | Desktop | Mobile |
 |-----------|---------|--------|
-| Chrome    | ✅      | ✅     |
-| Firefox   | ✅      | ✅     |
-| Safari    | ✅      | ✅     |
-| Edge      | ✅      | ✅     |
+| Chrome | ✅ | ✅ |
+| Firefox | ✅ | ✅ |
+| Safari | ✅ | ✅ |
+| Edge | ✅ | ✅ |
 
 ---
 
-## 🚀 Déploiement
+## 🔧 Technologies
 
-### GitHub Pages
-```bash
-git checkout gh-pages
-# ou créer une branche gh-pages
-
-# Le site sera accessible sur :
-# https://clarameurant59-code.github.io/cl/
-```
-
-### Vercel/Netlify
-```bash
-npm install -g vercel
-vercel deploy
-```
-
----
-
-## 🛠️ Améliorations futures
-
-- [ ] Menu interactif
-- [ ] Réservation en ligne
-- [ ] Mode VR (WebXR)
-- [ ] Audio ambiant
-- [ ] Animations dynamiques (personnel, mouvements)
-- [ ] Modèles 3D plus détaillés
-- [ ] Galerie de photos intégrée
-- [ ] Multilinguisme (FR/EN/DE)
+- **Babylon.js** : Moteur 3D WebGL
+- **HTML5** : Structure
+- **CSS3** : Styling responsive
+- **JavaScript ES6+** : Logique
+- **WebGL** : Rendu graphique
 
 ---
 
 ## 📝 Licence
 
-MIT License - Libre d'utilisation
+MIT License
 
 ---
 
 ## 👤 Auteur
 
-Créé par **Clara Meurant** - Restaurant Éco-Responsable Nantes
+Créé par **Clara Meurant** pour Vert Resto
 
 ---
 
-## 💬 Feedback & Support
-
-Pour toute question ou suggestion :
-- 📧 Email : contact@restaurant-ecoresponsable.fr
-- 🐛 Issues : GitHub Issues
-- 📲 Social : Instagram @restaurant_eco_nantes
-
----
-
-**Profitez de votre visite ! 🌱✨**
+**Explorez. Imaginez. Visitez Vert Resto ! 🌿✨**

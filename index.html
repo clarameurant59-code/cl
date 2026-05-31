@@ -3,35 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visite Virtuelle 3D - Restaurant Éco-Responsable Nantes</title>
+    <title>Vert Resto - Visite Virtuelle 3D | Restaurant Éco-Responsable Nantes</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+    <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
 </head>
 <body>
-    <div id="canvas-container"></div>
+    <canvas id="renderCanvas"></canvas>
     
-    <!-- UI Controls -->
-    <div id="ui-container">
-        <div id="info-panel">
-            <h1>Restaurant Éco-Responsable</h1>
-            <p id="location-info">Centre-ville Nantes • 60 couverts</p>
-            <div id="zone-description"></div>
+    <!-- UI Container -->
+    <div class="ui-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🌿 VERT RESTO</div>
+            <div class="subtitle">Restaurant Éco-Responsable - Nantes</div>
         </div>
         
-        <div id="controls-panel">
-            <button id="btn-info" class="control-btn" title="Informations">ℹ️</button>
-            <button id="btn-fullscreen" class="control-btn" title="Plein écran">⛶</button>
-            <button id="btn-reset" class="control-btn" title="Réinitialiser vue">🔄</button>
+        <!-- Info Panel -->
+        <div class="info-panel">
+            <h2 id="zone-title">Bienvenue</h2>
+            <p id="zone-description">Explorez notre restaurant éco-responsable de 60 couverts</p>
+            <div id="zone-details" class="zone-details"></div>
         </div>
         
-        <div id="navigation-hint">
-            <p>💡 Utilisez la souris pour naviguer • Scroll pour zoomer</p>
+        <!-- Navigation Zones -->
+        <div class="nav-zones">
+            <button class="zone-btn active" data-zone="accueil">🔔 Accueil</button>
+            <button class="zone-btn" data-zone="dining">🍽️ Salle</button>
+            <button class="zone-btn" data-zone="kitchen">👨‍🍳 Cuisine</button>
+            <button class="zone-btn" data-zone="bar">🍷 Bar</button>
+            <button class="zone-btn" data-zone="terrasse">🌿 Terrasse</button>
+        </div>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <button id="btn-fullscreen" class="ctrl-btn" title="Plein écran">⛶</button>
+            <button id="btn-reset" class="ctrl-btn" title="Réinitialiser">🔄</button>
+            <button id="btn-settings" class="ctrl-btn" title="Paramètres">⚙️</button>
+        </div>
+        
+        <!-- Help -->
+        <div class="help-overlay">
+            <p>🖱️ Drag to navigate | 🔍 Scroll to zoom | Mobile: Swipe</p>
         </div>
     </div>
+    
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+        <div class="spinner"></div>
+        <p>Bienvenue chez Vert Resto...</p>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="js/camera-controls.js"></script>
+    <script src="js/babylon-config.js"></script>
+    <script src="js/materials-lib.js"></script>
     <script src="js/scene-builder.js"></script>
-    <script src="js/ui-manager.js"></script>
+    <script src="js/furniture.js"></script>
+    <script src="js/lighting.js"></script>
+    <script src="js/interactions.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
