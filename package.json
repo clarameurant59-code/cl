@@ -1,0 +1,20 @@
+{
+  "name": "restaurant-visite-3d",
+  "version": "1.0.0",
+  "description": "Visite virtuelle 3D interactive d'un restaurant éco-responsable à Nantes",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx http-server"
+  },
+  "keywords": [
+    "3d",
+    "virtual-tour",
+    "three.js",
+    "restaurant",
+    "eco-friendly",
+    "interactive"
+  ],
+  "author": "Clara Meurant",
+  "license": "MIT"
+}

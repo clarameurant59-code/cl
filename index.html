@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visite Virtuelle 3D - Restaurant Éco-Responsable Nantes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <!-- UI Controls -->
+    <div id="ui-container">
+        <div id="info-panel">
+            <h1>Restaurant Éco-Responsable</h1>
+            <p id="location-info">Centre-ville Nantes • 60 couverts</p>
+            <div id="zone-description"></div>
+        </div>
+        
+        <div id="controls-panel">
+            <button id="btn-info" class="control-btn" title="Informations">ℹ️</button>
+            <button id="btn-fullscreen" class="control-btn" title="Plein écran">⛶</button>
+            <button id="btn-reset" class="control-btn" title="Réinitialiser vue">🔄</button>
+        </div>
+        
+        <div id="navigation-hint">
+            <p>💡 Utilisez la souris pour naviguer • Scroll pour zoomer</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/camera-controls.js"></script>
+    <script src="js/scene-builder.js"></script>
+    <script src="js/ui-manager.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
