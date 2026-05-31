@@ -3,64 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vert Resto - Visite Virtuelle 3D | Restaurant Éco-Responsable Nantes</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>🌿 VERT RESTO - Visite Virtuelle 3D Immersive</title>
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.babylonjs.com/babylon.js"></script>
     <script src="https://cdn.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
     <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
 </head>
 <body>
+    <!-- Canvas 3D -->
     <canvas id="renderCanvas"></canvas>
     
-    <!-- UI Container -->
-    <div class="ui-container">
-        <!-- Header -->
-        <div class="header">
-            <div class="logo">🌿 VERT RESTO</div>
-            <div class="subtitle">Restaurant Éco-Responsable - Nantes</div>
+    <!-- UI Overlay -->
+    <div class="ui-overlay">
+        <!-- Logo Header -->
+        <div class="header-section">
+            <div class="logo-container">
+                <div class="logo-icon">🌿</div>
+                <div class="logo-text">
+                    <h1>VERT RESTO</h1>
+                    <p>Restaurant Éco-Responsable</p>
+                </div>
+            </div>
         </div>
         
         <!-- Info Panel -->
         <div class="info-panel">
-            <h2 id="zone-title">Bienvenue</h2>
-            <p id="zone-description">Explorez notre restaurant éco-responsable de 60 couverts</p>
-            <div id="zone-details" class="zone-details"></div>
+            <div class="info-content">
+                <h2 id="location-name">Centre-Ville Nantes</h2>
+                <p id="location-desc">60 couverts • Éco-Responsable • Moderne</p>
+                <hr>
+                <div id="zone-info" class="zone-info">
+                    <h3 id="zone-title">Bienvenue</h3>
+                    <p id="zone-description">Explorez votre futur restaurant</p>
+                </div>
+            </div>
         </div>
         
-        <!-- Navigation Zones -->
-        <div class="nav-zones">
-            <button class="zone-btn active" data-zone="accueil">🔔 Accueil</button>
-            <button class="zone-btn" data-zone="dining">🍽️ Salle</button>
-            <button class="zone-btn" data-zone="kitchen">👨‍🍳 Cuisine</button>
-            <button class="zone-btn" data-zone="bar">🍷 Bar</button>
-            <button class="zone-btn" data-zone="terrasse">🌿 Terrasse</button>
+        <!-- Navigation Menu -->
+        <div class="nav-menu">
+            <button class="nav-btn active" data-camera="entrance">🔔 Entrée</button>
+            <button class="nav-btn" data-camera="dining">🍽️ Salle</button>
+            <button class="nav-btn" data-camera="bar">🍷 Bar</button>
+            <button class="nav-btn" data-camera="kitchen">👨‍🍳 Cuisine</button>
+            <button class="nav-btn" data-camera="overview">🏢 Vue Globale</button>
         </div>
         
         <!-- Controls -->
         <div class="controls">
-            <button id="btn-fullscreen" class="ctrl-btn" title="Plein écran">⛶</button>
-            <button id="btn-reset" class="ctrl-btn" title="Réinitialiser">🔄</button>
-            <button id="btn-settings" class="ctrl-btn" title="Paramètres">⚙️</button>
+            <button id="btn-info" class="control-btn" title="Info" aria-label="Info">ℹ️</button>
+            <button id="btn-fullscreen" class="control-btn" title="Fullscreen" aria-label="Fullscreen">⛶</button>
+            <button id="btn-360" class="control-btn" title="360°" aria-label="360 View">🔄</button>
+            <button id="btn-reset" class="control-btn" title="Reset" aria-label="Reset">🔁</button>
         </div>
         
-        <!-- Help -->
-        <div class="help-overlay">
-            <p>🖱️ Drag to navigate | 🔍 Scroll to zoom | Mobile: Swipe</p>
+        <!-- Help Text -->
+        <div class="help-text">
+            🖱️ Drag to navigate | 🔍 Scroll to zoom | Mobile: Swipe
+        </div>
+        
+        <!-- Loading Bar -->
+        <div class="loading-container">
+            <div class="loading-bar">
+                <div id="loading-progress" class="loading-progress"></div>
+            </div>
+            <p id="loading-text">Création du restaurant...</p>
         </div>
     </div>
     
-    <!-- Loading Screen -->
-    <div id="loading" class="loading-screen">
-        <div class="spinner"></div>
-        <p>Bienvenue chez Vert Resto...</p>
-    </div>
-
-    <script src="js/babylon-config.js"></script>
-    <script src="js/materials-lib.js"></script>
-    <script src="js/scene-builder.js"></script>
-    <script src="js/furniture.js"></script>
-    <script src="js/lighting.js"></script>
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/babylon-engine.js"></script>
+    <script src="js/textures-generator.js"></script>
+    <script src="js/materials-realistic.js"></script>
+    <script src="js/restaurant-builder.js"></script>
+    <script src="js/lighting-advanced.js"></script>
+    <script src="js/camera-system.js"></script>
     <script src="js/interactions.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main-app.js"></script>
 </body>
 </html>
